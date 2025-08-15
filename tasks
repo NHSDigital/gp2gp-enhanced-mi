@@ -47,21 +47,6 @@ do
     validate)
         ./tasks _validate
         ;;
-    publish_docker)
-      if [ -z $IMAGE_TAG ]; then
-          echo "Please set IMAGE_TAG environment variable"
-          exit 1
-      fi
-      ecr_login=$(./scripts/ecr-helper get-login)
-      ecr_repo_uri=$(./scripts/ecr-helper get-repo-uri)
-      docker build -t ${ecr_repo_uri}:latest -t ${ecr_repo_uri}:${IMAGE_TAG} .
-      eval $ecr_login
-      docker push ${ecr_repo_uri}:${IMAGE_TAG}
-      ;;
-    *)
-        echo "Invalid command: '${command}'"
-        exit 1
-        ;;
   esac
 done
 
