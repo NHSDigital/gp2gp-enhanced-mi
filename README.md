@@ -1,4 +1,4 @@
-    # prm-gp-registrations-mi
+# gp2gp-enhanced-mi
 
 GP Registrations MI is a service used to collect Management Information describing patient transfers in the form of JSON events sent over a RESTful API.
 
@@ -6,76 +6,87 @@ GP Registrations MI is a service used to collect Management Information describi
 
 ### Prerequisites
 
-- Download Java 17 OpenJDK 
-```
+- Download Java 17 OpenJDK
+
+```shell
 brew install openjdk@17
 sudo ln -sfn /usr/local/opt/openjdk@17/libexec/openjdk.jdk \
      /Library/Java/JavaVirtualMachines/openjdk-17.jdk
 ```
 
 List your java versions
-```
+
+```shell
 /usr/libexec/java_home -V 
 ```
 
 You may need to set the JAVA_HOME path in your config, eg. (zsh):
-```
+
+```shell
 vim ~/.zshrc
 export JAVA_HOME=`/usr/libexec/java_home`
 ```
 
 Source your profile to load the changes:
-```
+
+```shell
 source ~/.zshrc
 ```
 
 ### Running the application
 
-```
+```shell
 ./tasks run_local
 ```
+
 To check the application is running, you can go to swagger:
-```
+
+```shell
 http://localhost:8080/swagger
 ```
 
 Or you can also hit the status endpoint:
-```
+
+```shell
 http://localhost:8080/_status
 ```
-
 
 ### Running the tests and additional checks
 
 Run unit tests
-```
+
+```shell
 ./tasks test_unit
 ```
 
 Run test coverage verification
-```
+
+```shell
 ./tasks test_coverage
 ```
 
 Run dependency check
-```
+
+```shell
 ./tasks dep
 ```
 
 Run code quality check
-```
+
+```shell
 ./tasks code_quality
 ```
 
 Validate the code
-```
+
+```shell
 ./tasks validate
 ```
 
-
 ### Troubleshooting
-If you are using IntelliJ and you are unable to run the tests, 
-make sure to run the tests through IntelliJ IDEA rather than Gradle 
-```
+
+If you are using IntelliJ and you are unable to run the tests, make sure to run the tests through IntelliJ IDEA rather than Gradle.
+
+```shell
 Build, Execution, Deployment > Build Tools > Gradle > Run tests using: Intellij
 ```
