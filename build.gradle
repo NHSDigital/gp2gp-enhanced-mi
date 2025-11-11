@@ -57,7 +57,7 @@ tasks.withType(Test) {
 
 sonar {
   properties {
-    property "sonar.projectKey", "prm-mi_prm-gp-registrations-mi"
+    property "sonar.projectKey", "NHSDigital_gp2gp-enhanced-mi"
     property "sonar.organization", "nhsdigital"
     property "sonar.host.url", "https://sonarcloud.io"
   }
