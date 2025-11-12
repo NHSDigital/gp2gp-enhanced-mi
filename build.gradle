@@ -8,9 +8,9 @@ plugins {
 	id 'com.github.spotbugs' version '5.0.13'
 }
 
-group = 'com.prm-gp-registrations-mi'
+group = 'com.gp2gp-enhanced-mi'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = JavaVersion.VERSION_17
+sourceCompatibility = '17'
 
 configurations {
 	compileOnly {
@@ -57,8 +57,8 @@ tasks.withType(Test) {
 
 sonar {
   properties {
-    property "sonar.projectKey", "prm-mi_prm-gp-registrations-mi"
-    property "sonar.organization", "prm-mi"
+    property "sonar.projectKey", "NHSDigital_gp2gp-enhanced-mi"
+    property "sonar.organization", "nhsdigital"
     property "sonar.host.url", "https://sonarcloud.io"
   }
 }
